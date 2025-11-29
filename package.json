@@ -1,0 +1,56 @@
+{
+  "name": "luw-shell-scripting-syntax-extension",
+  "displayName": "LUW Shell Scripting Syntax Extension",
+  "description": "LUW Shell Scripting Syntax Extension",
+  "publisher": "LATINAISoftware",
+  "version": "0.0.2",
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "activationEvents": [
+    "onLanguage:meineSprache"
+  ],
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "latin",
+        "aliases": [
+          "Latin",
+          "latin"
+        ],
+        "extensions": [
+          ".latin"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "latin",
+        "scopeName": "source.latin",
+        "path": "./syntaxes/latin.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "latin.runScript",
+        "title": "Run Latin Script"
+      }
+    ]
+
+
+
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/vscode": "^1.106.1",
+    "typescript": "^5.9.3"
+  }
+}

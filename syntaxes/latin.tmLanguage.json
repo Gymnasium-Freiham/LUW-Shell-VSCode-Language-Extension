@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Latin",
+  "scopeName": "source.latin",
+  "patterns": [
+    { "include": "#commands" },
+    { "include": "#parameters" },
+    { "include": "#arguments" },
+    { "include": "#strings" },
+	{ "include": "#numbers" },
+	{ "include": "#comments" }
+  ],
+  "repository": {
+    "commands": {
+      "patterns": [
+        {
+          "name": "support.function.command.latin",
+          "match": "^(\\w+)"
+        }
+      ]
+    },
+    "parameters": {
+      "patterns": [
+        {
+          "name": "variable.parameter.latin",
+          "match": "\\b[a-z][a-z0-9_]*\\b"
+        }
+      ]
+    },
+    "arguments": {
+      "patterns": [
+        {
+          "name": "constant.language.argument.latin",
+          "match": "--[a-zA-Z0-9_-]+"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.latin",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.latin",
+          "match": "\\\\."
+        }
+      ]
+    },
+	"numbers": {
+		"patterns": [
+			{
+			"name": "constant.numeric.latin",
+			"match": "\\b\\d+\\b"
+			}
+		]
+	},
+	"comments": {
+		"patterns": [
+			{
+			"name": "comment.line.number-sign.latin",
+			"match": "#.*$"
+			}
+		]
+	}
+  }
+}

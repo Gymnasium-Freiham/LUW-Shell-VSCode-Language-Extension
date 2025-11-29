@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "latin-scroll": {
+      "iconPath": "./icons/latin-scroll.svg"
+    }
+  },
+  "fileExtensions": {
+    "latin": "latin-scroll"
+  }
+}
